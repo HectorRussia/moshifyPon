@@ -21,13 +21,14 @@ html {
 }
 body {
     font-family: Inter,Arial, Helvetica, sans-serif;
-    color:var(--color-body);
     font-size: 2.4rem;
     line-height: 1.5; 
+    color: var(--color-body);
 }
 h1,h2,h3 {
     color: var(--color-headings);
     margin-bottom: 1rem;
+    line-height: 1.1;
 }
 
 h1 {
@@ -359,6 +360,10 @@ a {
     .plan__billing-cycle {
         font-size: 1.6rem;
     }
+
+    .plan__description {
+        font-size: 1.7rem;
+      }
 }
 
 /* Popular Badge*/
@@ -674,4 +679,31 @@ a {
         border: 0;
     }
     
+}
+
+/* Hero */
+
+.hero {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 90% , 0% 100%);
+}
+
+.hero__tagline {
+    font-size: 2rem;
+    color: #b9c3cf;
+    letter-spacing: 1px;
+    margin: 2rem 0 5rem;
+}
+
+.hero__image {
+    width: 100%;
+}
+
+@media screen and (min-width:768px) { /*and (min-width:768px) ต้องเว้นนะไม่งั้นไม่ทำงาน*/
+    .hero {
+        padding-top: 0;
+    }
+    .hero__content {
+        text-align: left;
+        align-self: center;
+    }
 }
