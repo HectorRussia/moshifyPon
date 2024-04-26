@@ -132,7 +132,6 @@ a {
 .list {
     list-style: none;
     padding-left: 0;
-    font-size: bold;
 }
 
 .list--inline .list_item {
@@ -198,12 +197,12 @@ a {
     cursor: pointer;
     font-size: 1.8rem;
     font-weight: 600;
-    padding: 2rem 3rem;
-    text-transform: uppercase;
-    white-space: nowarp;
-    text-align: center;
     margin: 1rem 0;
     outline: 0;
+    padding: 2rem 4vw;
+    text-align: center;
+    text-transform: uppercase;
+    white-space: nowarp;
 }
 
 .btn .icon {
@@ -299,6 +298,7 @@ a {
     border: 0;
     flex-grow:1;
     padding: 1.5rem 2rem; /*verti & hori*/
+    width: 0;
 }
 
 .input-group .btn {
@@ -450,10 +450,6 @@ a {
     content: close-quote;
 }
 
-.quote .media__title {
-
-}
-
 .quote__author {
     font-size: 3rem;
     font-weight: 500;
@@ -508,34 +504,37 @@ a {
 
 /* Testimonials */
 
-.testimonial { 
+.testimonial {
     padding: 3rem;
-}
-
-.testimonial__image {
+  }
+  
+  .testimonial .quote {
+    margin: 2rem 0;
+    font-size: 110%;
+  }
+  
+  .testimonial__image {
     position: relative;
-}
-
-.testimonial__image > img {
-    width: 100%;
-}
-
-.testimonial__image > .icon-container {
+    margin: 0 3rem;
+  }
+  
+  .testimonial__image > .icon-container {
     position: absolute;
-    top:3rem;
+    top: 3rem;
     right: -32px;
-}
-
-@media screen and (mid-width: 768px) {
-    .testimonial .quote,
-    .testimonial .quote__author {
-        font-size: 2,4rem;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .testimonial__image {
+      margin: 0;
     }
-
+  
     .testimonial .quote {
-        margin-left:  6rem;
+      margin: 5rem 0 0 6rem;
+      font-size: 120%;
+      line-height: 1.5;
     }
-}
+  }
 
 /* Callouts */
 
@@ -755,8 +754,9 @@ a {
 }
 
 .block-domain__prices {
+    color: var(--color-headings);
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(2,1fr);
     grid-template-rows: repeat(2,6rem);
     font-size: 2rem;
     font-weight: 600;
@@ -825,7 +825,7 @@ a {
 
     .block-showcase__image > img {
         width: auto;
-        max-width: 700px;
+        max-width: 400px;
     }
     
 }
@@ -834,6 +834,7 @@ a {
 
 .footer {
     background: #232323;
+    padding-top: 10rem;
 }
 
 .footer__section {
@@ -912,3 +913,8 @@ img {
         font-size: 1.6rem;
     }
 }
+
+/* Sign-up Callout */
+.callout-signup {
+    transform: translateY(5rem);
+  }
